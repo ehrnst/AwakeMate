@@ -9,5 +9,10 @@
   "description": "Keep a Windows laptop awake during Copilot agent turns, then restore its previous power plan.",
   "keywords": ["copilot", "windows", "power", "hooks", "no sleep"],
   "hooks": "hooks/hooks.json",
-  "license": "MIT"
+  "license": "MIT",
+  "extensions": {
+    "com.github.awesome-copilot": {
+      "logo": "assets/awakemate.svg"
+    }
+  }
 }

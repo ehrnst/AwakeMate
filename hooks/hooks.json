@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "hooks": {
+    "userPromptSubmitted": [
+      {
+        "type": "command",
+        "powershell": "pwsh -NoLogo -NoProfile -NonInteractive -File \"${PLUGIN_ROOT}\\scripts\\hook.ps1\" -Event Acquire",
+        "timeoutSec": 30
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "powershell": "pwsh -NoLogo -NoProfile -NonInteractive -File \"${PLUGIN_ROOT}\\scripts\\hook.ps1\" -Event Acquire",
+        "timeoutSec": 30
+      }
+    ],
+    "agentStop": [
+      {
+        "type": "command",
+        "powershell": "pwsh -NoLogo -NoProfile -NonInteractive -File \"${PLUGIN_ROOT}\\scripts\\hook.ps1\" -Event Release",
+        "timeoutSec": 90
+      }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "powershell": "pwsh -NoLogo -NoProfile -NonInteractive -File \"${PLUGIN_ROOT}\\scripts\\hook.ps1\" -Event Release",
+        "timeoutSec": 30
+      }
+    ]
+  }
+}

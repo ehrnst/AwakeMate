@@ -1,8 +1,13 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "awakemate",
+  "author": {
+    "name": "Martin Ehrnst"
+  },
+  "repository": "https://github.com/ehrnst/awakemate",
   "version": "0.1.0",
   "description": "Keep a Windows laptop awake during Copilot agent turns, then restore its previous power plan.",
-  "keywords": ["copilot", "windows", "power", "hooks"],
+  "keywords": ["copilot", "windows", "power", "hooks", "no sleep"],
   "hooks": "hooks/hooks.json",
   "license": "MIT"
 }
